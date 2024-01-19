@@ -1,28 +1,69 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <!-- Include the TopNavMenu component -->
+      <TopNavMenu />
+      <!-- Navigation Menu -->
+      <NavMenu />
+    </header>
+    <main>
+      <!--  main content goes here -->
+      <LandingPageMain />
+      <WhoWeAre />
+      <HowCanWeHelpYou />
+      <WhatWeDo />
+    </main>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TopNavMenu from "@/components/TopNavMenu.vue";
+import NavMenu from "@/components/NavMenu.vue";
+import LandingPageMain from "@/components/LandingPageMain.vue";
+import WhoWeAre from "@/components/WhoWeAre.vue";
+import HowCanWeHelpYou from "@/components/HowCanWeHelpYou.vue";
+import WhatWeDo from "@/components/WhatWeDo.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // Register  components here
+    TopNavMenu,
+    NavMenu,
+    LandingPageMain,
+    WhoWeAre,
+    HowCanWeHelpYou,
+    WhatWeDo,
+  },
+};
 </script>
 
 <style>
+/* Reset some default styles */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffff;
+  color: white;
+  padding: 15px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
 }
 </style>
