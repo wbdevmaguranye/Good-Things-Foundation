@@ -14,6 +14,9 @@
       <WhatWeDo />
     </main>
     <router-view></router-view>
+   
+      <FooterForm />
+    
   </div>
 </template>
 
@@ -23,7 +26,8 @@ import NavMenu from "@/components/NavMenu.vue";
 import LandingPageMain from "@/components/LandingPageMain.vue";
 import WhoWeAre from "@/components/WhoWeAre.vue";
 import HowCanWeHelpYou from "@/components/HowCanWeHelpYou.vue";
-import WhatWeDo from "@/components/WhatWeDo.vue";
+import WhatWeDo from "@/components/WhatWeDo.vue"
+import FooterForm from "@/components/FooterForm.vue";
 
 export default {
   name: "App",
@@ -35,6 +39,7 @@ export default {
     WhoWeAre,
     HowCanWeHelpYou,
     WhatWeDo,
+    FooterForm,
   },
 };
 </script>
